@@ -5,9 +5,13 @@ $(document).ready(function () {
         ajax: 'data.json',
         columns: [
             { data: '_id' },
-            { data: 'postcode' }
+            { data: 'lga_name19' },
+            {data: 'lhd_2010_name'},
+            {data: 'postcode'},
+            {data: 'confirmed_by_pcr'},
+            {data: 'confirmed_cases_count'}
         ],
-        pageLength: 10,
+        pageLength: 8,
         filter: true,
         deferRender: true,
         scrollY: 200,
