@@ -12,50 +12,51 @@
 <title>NSW Covid Data</title>
 </head>
 
-<body>
-    <nav class="navbar bg-light">
+<body style="background-color:grey;">
+    <nav class="navbar bg-dark">
         <div class="container-fluid fs-3">
             <a class="navbar-brand" href="#">
                 <img src="images/COVID19_Thumbnail.png" alt="logo" width="40" height="30"
                     class="d-inline-block align-text-top ">
-                <span class="fs-3">NSW Covid Data</span>
-                <a href="#" >NSW Covid Cases By Location</a>
-                <a href="#">NSW Covid Cases By Age</a>
+                <span class="fs-3" style="color:whitesmoke;">NSW Covid Data</span>
+                <a href="#" class="nav-link" style="color:whitesmoke;">NSW Covid Cases By Location</a>
+                <a href="#" class="nav-link" style="color:whitesmoke;">NSW Covid Cases By Age</a>
             </a>
-            <span class="nav justify-content-end fs-3">Contact Us</span>
+            <span class="nav-item justify-content-end fs-3" style="color:whitesmoke;">Contact Us</span>
         </div>
     </nav>
     <br>
-    <div class="tab-container d-flex justify-content-center fs-3">
+    <div class="container rounded" style="background-color:rgb(242, 243, 244);">
+    <div class="justify-content-left fs-3"  style="color: black;font-family: Helvetica, sans-serif;">
         NSW Covid Cases By Location
     </div>
     <br><br>
     <!-- table -->
-    <div class="container ">
-    <table id="example" class="table table-striped" >
-        <thead>
-            <tr>
-                <th>Id </th>
-                <th>Suburb Name</th>
-                <th>District Name</th>
-                <th>PostCode</th>
-                <th>PCR Conformation</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Id </th>
-                <th>Suburb Name</th>
-                <th>District Code</th>
-                <th>PostCode</th>
-                <th>PCR Conformation</th>
-                <th>Total</th>
+    
+        <table id="example" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id </th>
+                    <th>Suburb Name</th>
+                    <th>District Name</th>
+                    <th>PostCode</th>
+                    <th>PCR Conformation</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Id </th>
+                    <th>Suburb Name</th>
+                    <th>District Code</th>
+                    <th>PostCode</th>
+                    <th>PCR Conformation</th>
+                    <th>Total</th>
 
-            </tr>
-        </tfoot>
-    </table>
-</div>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 
 
     <footer class="fixed-bottom">
@@ -63,7 +64,7 @@
     </footer>
 
 
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
