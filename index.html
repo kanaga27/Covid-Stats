@@ -28,50 +28,93 @@
         </div>
     </nav>
     <br>
-    <div class="container rounded" style="background-color:rgb(242, 243, 244);">
-        <div class="justify-content-left fs-3" style="color: black;font-family: Helvetica, sans-serif;">
-            <p> NSW Covid Cases By Location</p>
 
+    <div class="container rounded" style="background-color:rgb(242, 243, 244);">
+        <br>
+        <div class="row justify-content-left fs-3" style="color: black;font-family: Helvetica, sans-serif;">
+            <!-- <p> NSW Covid Cases By Location</p> -->
+            <div class="col-3">
+                <label>NSW Covid Cases</label>
+            </div>
+            <div class="col-3">
+
+                <div class="form-check form-switch">
+
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked
+                        onclick="displayData()">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Location</label>
+                </div>
+            </div>
+            <div class="col-4">
+
+                <div class=" d-flex justify-content-between">
+                    <label for="startDate">Date </label>
+                    <input id="startDate" data-provide="datepicker" class="form-control" />
+                </div>
+            </div>
+                <!-- <span id="startDateSelected"></span> -->
+                <div class="col-2">
+
+                    <button type="button" id="btnDate" class="btn btn-success btn-lg" onclick="displayData()">
+                        Go
+                    </button>
+                </div>
+
+           
         </div>
-       
-        <div class="col-lg-3 col-sm-6 d-flex ">
-            <label for="startDate">Choose a Date</label>
-            <input id="startDate" data-provide="datepicker" class="form-control" />
-            <span id="startDateSelected"></span>
-            <button type="button" id="btnDate" class="btn btn-primary btn-lg" onclick="displayDate()" >
-              Go
-            </button>
-        </div>
+
         <br><br>
         <!-- table -->
+        <div id="dataLocation">
+            <table id="dataTableLocation" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id </th>
+                        <th>Suburb Name</th>
+                        <th>District Name</th>
+                        <th>PostCode</th>
+                        <th>PCR Conformation</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id </th>
+                        <th>Suburb Name</th>
+                        <th>District Code</th>
+                        <th>PostCode</th>
+                        <th>PCR Conformation</th>
+                        <th>Total</th>
 
-        <table id="example" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Id </th>
-                    <th>Suburb Name</th>
-                    <th>District Name</th>
-                    <th>PostCode</th>
-                    <th>PCR Conformation</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>Id </th>
-                    <th>Suburb Name</th>
-                    <th>District Code</th>
-                    <th>PostCode</th>
-                    <th>PCR Conformation</th>
-                    <th>Total</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
 
-                </tr>
-            </tfoot>
-        </table>
+        <div id="dataAgeWise">
+            <table id="dataTableAgeWise" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id </th>
+                        <th>Age Group</th>
+                        <th>PCR Conformation</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id </th>
+                        <th>Age Group</th>
+                        <th>PCR Conformation</th>
+                        <th>Total</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
 
 
-    <footer>
+    <footer class="fixed-bottom">
         <div class="d-flex mt-5 py-3 bg-light justify-content-center align-text-center">© Copyright 2022 Kana</div>
     </footer>
 
